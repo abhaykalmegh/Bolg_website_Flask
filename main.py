@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from datetime import datetime
 import requests
 import smtplib
@@ -38,7 +38,7 @@ def post(index):
 def form_contact():
     data = request.form
     send_mail(data["name"], data["email"], data["phone"], data["message"])
-    return "<h1>Successfully sent your message</h1>"
+    return redirect('/contact', code=302)
 
 
 def send_mail(name, email, phone, message):
