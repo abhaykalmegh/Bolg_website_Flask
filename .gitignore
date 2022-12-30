@@ -1,0 +1,17 @@
+
+.idea
+
+# To ignore all files with `.pyc` extension
+*.pyc
+
+# To ignore all files with `.xml` extension
+*.xml
+
+# To ignore all files with `.json` extension
+*.json
+
+# To ignore all files related to virtual environment
+venv
+
+# To ignore all files with `.log` extension
+*.log
