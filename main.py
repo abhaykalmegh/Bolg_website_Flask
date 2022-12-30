@@ -4,8 +4,9 @@ import requests
 import smtplib
 app = Flask(__name__)
 
-MY_EMAIL = "abhaykalmegh@gmail.com"
-MY_PASSWORD = "wzzryyieycshbvvl"
+# Please change your mail requirement below.
+MY_EMAIL = "yourmail@gmail.com"
+MY_PASSWORD = "your-app-password"  # refer read.MD file 
 
 posts = requests.get('https://api.npoint.io/82616525f477bf9308d1').json()
 
@@ -48,7 +49,7 @@ def send_mail(name, email, phone, message):
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
                     from_addr=MY_EMAIL,
-                    to_addrs="sanket1111bhagat87@gmail.com",
+                    to_addrs="your-mail@gmail.com",  # Please change your mail address here
                     msg=email_message
                 )
 
